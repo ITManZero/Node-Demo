@@ -8,9 +8,9 @@ const {
 } = require("../controller");
 const { guest, auth } = require("../middleware");
 
-router.route("/login").post(guest, login).get(guest, loginForm);
+router.route("/login").post(guest, login);
 
-router.route("/signup").post(guest, signup).get(guest, signupForm);
+router.route("/signup").post(guest, signup);
 
 router.route("/logout").get(auth, logout);
 
